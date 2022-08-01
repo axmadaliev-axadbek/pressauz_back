@@ -4,7 +4,7 @@ const profileImage = profileUpload.single('avatar')
 const jwt = require('../../utils/jwt.js')
 const GETALL = async (req,res) => {
     try {
-        let users = await model.ALLUSERS()
+        let users = await model.ALLUSERS(req.params)
         if(users) {
             res.status(200).json({
                 status:200,

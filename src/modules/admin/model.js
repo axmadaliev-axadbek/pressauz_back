@@ -1,9 +1,9 @@
 const { LOGIN, REGISTER, CHANGEPROFILE, GETALL} = require('./query.js')
 const { fetch, fetchAll } = require('../../lib/postgres.js')
 
-const ALLUSERS = async () => {
+const ALLUSERS = async ({id = 0}) => {
     try {
-        return await fetchAll(GETALL)
+        return await fetchAll(GETALL, id)
     } catch (error) {
         console.log(error)
     }
