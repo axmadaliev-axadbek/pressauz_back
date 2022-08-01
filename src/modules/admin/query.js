@@ -1,6 +1,6 @@
 const GETALL = `
 select * from users as u
-where case  when $1 > 0 then u.user_id = $1
+where case  when $1 > 0 then u.users_id = $1
                             else true
                             end
 
